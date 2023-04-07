@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SARAM의 아카이브</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">SARAM</a>
+      <ul>
+        <li><a href="#" class="active">HOME</a></li>
+        <li><a href="#About" id="About-link">About</a></li>
+        <li><a href="#Work" id="Work-link">Work</a></li>
+        <li><a href="#contact" id="contact-link">Contact</a></li>
+      </ul>
+    </header>
+    <section>
+      <img src="stars.png" id="stars" />
+      <img src="moon.png" id="moon" />
+      <h2 id="text">아카이브</h2>
+      <a href="#sec" id="btn">Exeplore</a>
+    </section>
+    <div class="sec" id="sec">
+      <h2>SARAM</h2>
+      <p><br /><br /></p>
+    </div>
+    <div class="sec" id="About">
+      <h2>About</h2>
+      <p></p>
+    </div>
+    <div class="sec" id="Work">
+      <h2>Work</h2>
+      <p></p>
+    </div>
+    <div class="sec" id="contact">
+      <h2>Contact</h2>
+      <p>Blog : https://blog.naver.com/pfit-saram</p>
+      <p>twitter : @did_jkd</p>
+    </div>
+    <script>
+      let stars = document.getElementById("stars");
+      let moon = document.getElementById("moon");
+      let mountains_behind = document.getElementById("mountains_behind");
+      let text = document.getElementById("text");
+      let btn = document.getElementById("btn");
+      let mountains_front = document.getElementById("mountains_front");
+      let header = document.querySelector("header");
+
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + "px";
+        moon.style.top = value * 1.0 + "px";
+        text.style.marginTop = value * 1 + "px";
+        text.style.marginTop = value * 1.5 + "px";
+        btn.style.marginTop = value * 1.5 + "px";
+        header.style.top = value * 0 + "px";
+      });
+    </script>
+  </body>
+</html>
